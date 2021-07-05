@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Car extends React.Component {
+class CSE_Syllabus extends React.Component {
   	render() {
     	return (
 			<div>
@@ -102,5 +102,5 @@ class Car extends React.Component {
 		);
   	}
 }
-ReactDOM.render(<Car/>, document.getElementById('root'));
+ReactDOM.render(<CSE_Syllabus/>, document.getElementById('root'));
 
