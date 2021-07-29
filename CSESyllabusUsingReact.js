@@ -15,9 +15,15 @@ function Semesters(props){
 
 function Subjects(props){
   let subjects = props.subjects;  
-  return subjects.map((sub,i) =>{ 
-  return <li id={i}>{sub}</li>}) 
+  let sub = [];
+  for(let i = 0;i < 6; i++){
+    sub.push(<li id={i}>{subjects[i]}</li>)
+  }
+  return sub;
 }
+//   return subjects.map((sub,i) =>{ 
+//   return <li id={i}>{sub}</li>}) 
+// }
 
 function Syllabus(){
   const [subjects, setSubjects] = useState([]);
@@ -34,7 +40,7 @@ function Syllabus(){
 
   return <div>
     <input type = "text" placeholder = "subject name" onChange = {handleChange} value={subject}></input>
-    <button onclick = {handleSubject}>ADD</button>
+    <button onClick = {handleSubject}>ADD</button>
     <Semesters subjects = {subjects}/>
     </div>   
 }
