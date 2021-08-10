@@ -16,7 +16,7 @@ function Subject() {
     <div >
       <ul>
       <input type="text" placeholder="Subject Name" onChange={handleChange} value={subject} className = "subject"/>
-      <button onClick={addSubject} className="button">ADD</button> 
+      <button onClick={addSubject} className="button">ADD SUBJECT</button> 
       </ul>
       <ul> 
       { subjects.map((sub, i)=>{ return(<li key={i}>{sub}</li>)}) }
@@ -26,21 +26,30 @@ function Subject() {
 }
 
 function Semester() {
-  const semesters = ['Semester 1', 'Semester 2', 'Semester 3', 'Semester 4', 'Semester 5', 'Semester 6','Semester 7', 'Semester 8']
+
+  const [semester, setSemester] = useState('');
+  const [ semesters, setSemesters] = useState([]);
+
+  const handleSemester = (e) => {
+      setSemester([e.target.value]);
+  }
+
+  const addSemester = () =>{
+    setSemesters([...semesters,semester]);
+  }
+
   return (
-    <ul>
-      {semesters.map((sem,i) => {
-        return (
-          <li id={i}>
-              {sem}
-              <li>
-              <Subject />  
-              </li>
-          </li>
-        )
-      })
-      }
-    </ul>
+    <div>
+      <ul>
+        <input type = "text" placeholder = "Semester Name" onChange = {handleSemester} value={semester} className="semester"/>
+        <button onClick= {addSemester} className="button">ADD SEMESTER</button>
+      </ul>
+      <ul>
+        {semesters.map((sem,i)=>{return (<li key={i}>{sem}
+        <Subject/>
+        </li>)})}
+      </ul>
+    </div>
   )
 }
 
