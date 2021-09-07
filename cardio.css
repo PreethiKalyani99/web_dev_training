@@ -1,0 +1,22 @@
+.cards{
+    background-color: limegreen;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-content: space-around;
+    height: 250px;
+    width: 1112px;
+    margin: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.playerCard{
+    justify-content: space-around;
+    background-color: linen;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    /* margin: 50px; */
+    padding: 20px;
+}
