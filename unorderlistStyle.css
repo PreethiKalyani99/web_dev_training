@@ -1,0 +1,15 @@
+#list > ul{
+    list-style-type: circle;
+}
+
+#sub > li,ul{
+    list-style-type: disc;
+}
+
+.semester{
+    list-style-type: circle; 
+  }  
+
+.subject{
+    list-style-type: disc;
+}
